@@ -7,6 +7,7 @@ Upload a few reference photos. Photo Style Unifier reads the colour, tone and at
 - **Free.** No account, no limits, no watermark.
 - **Private.** Everything runs in your browser. Your photos are never uploaded anywhere.
 - **Open source.** MIT licence.
+- Made by **office 未来圏**.
 
 👉 **Use it here: https://kohyoshida1-dev.github.io/photo-style-unifier/**
 
@@ -53,6 +54,7 @@ Pushing to `main` deploys to GitHub Pages automatically (see `.github/workflows/
 - **無料**：会員登録・枚数制限・透かしはありません
 - **プライバシー**：処理はすべてブラウザ内で行われ、写真がどこかへ送信されることはありません
 - **オープンソース**：MIT ライセンス
+- **制作**：office 未来圏
 
 **使い方**：上の URL を開き、「お手本の写真」を入れて解析し、加工したい写真を入れて強度を調整し、ダウンロードするだけです。
 

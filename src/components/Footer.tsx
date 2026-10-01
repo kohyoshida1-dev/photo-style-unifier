@@ -1,5 +1,5 @@
 import { navigate } from '../lib/router';
-import { REPO_URL } from '../config';
+import { REPO_URL, AUTHOR_NAME, AUTHOR_URL } from '../config';
 
 export function Footer() {
   const linkStyle = { color: 'var(--text-muted)' };
@@ -19,7 +19,20 @@ export function Footer() {
           Source code (GitHub)
         </a>
       </div>
-      <p className="text-center text-[10px] mt-4" style={{ color: 'var(--text-subtle)' }}>
+      <p className="text-center text-xs mt-4" style={{ color: 'var(--text-muted)' }}>
+        Made by{' '}
+        {AUTHOR_URL ? (
+          <a
+            href={AUTHOR_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'var(--accent)', textDecoration: 'underline', textUnderlineOffset: 3 }}
+          >
+            {AUTHOR_NAME}
+          </a>
+        ) : AUTHOR_NAME}
+      </p>
+      <p className="text-center text-[10px] mt-2" style={{ color: 'var(--text-subtle)' }}>
         Photo Style Unifier · Free and open source under the MIT License
       </p>
     </footer>
