@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Design tokens (dark, default) ── */
+:root {
+  --bg:            #0b0b0c;
+  --bg2:           #131315;
+  --bg3:           #1c1c1f;
+  --bg4:           #242428;
+  --border:        rgba(255,255,255,0.06);
+  --border-strong: rgba(255,255,255,0.12);
+  --text:          #f0ede8;
+  --text-muted:    #9a9693;   /* was #6b6864 — too dark in dark mode */
+  --text-subtle:   #6b6763;   /* was #3d3b38 — nearly invisible in dark mode */
+  --accent:        #d4a574;
+  --accent-dim:    rgba(212,165,116,0.12);
+  --accent-border: rgba(212,165,116,0.28);
+  --accent-text:   #d4a574;
+  --danger:        #f87171;
+  --radius:        12px;
+  --radius-sm:     8px;
+  /* ToneMountain グラデーション — ダーク背景で山の輪郭が見える明度に設定 */
+  --tone-shadow:    #2e2e32;
+  --tone-mid:       #555558;
+  --tone-highlight: #d8d8d8;
+}
+
+/* ── Light theme ── */
+[data-theme="light"] {
+  --bg:            #f5f3f0;
+  --bg2:           #ece9e4;
+  --bg3:           #e0ddd8;
+  --bg4:           #d4d0ca;
+  --border:        rgba(0,0,0,0.07);
+  --border-strong: rgba(0,0,0,0.14);
+  --text:          #1a1816;
+  --text-muted:    #6a6663;
+  --text-subtle:   #9a9793;
+  --accent:        #a06830;
+  --accent-dim:    rgba(160,104,48,0.10);
+  --accent-border: rgba(160,104,48,0.28);
+  --accent-text:   #a06830;
+  /* ライトモードでは山を暗色→中間→淡色で表現 */
+  --tone-shadow:    #5a5a5e;
+  --tone-mid:       #8a8a8e;
+  --tone-highlight: #f0f0f0;
+}
+
+/* ── Compact density ── */
+[data-density="compact"] {
+  font-size: 13px;
+}
+
+/* ── Base ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', 'Noto Sans JP', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { min-height: 100vh; }
+
+/* ── Typography helpers ── */
+.mono  { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+.serif { font-family: 'Lora', Georgia, serif; }
+
+/* ── Intensity range input ── */
+input[type="range"].style-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  background: var(--bg4);
+  border-radius: 99px;
+  outline: none;
+  cursor: pointer;
+}
+input[type="range"].style-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+input[type="range"].style-range:hover::-webkit-slider-thumb {
+  box-shadow: 0 0 0 5px var(--accent-dim);
+}
+input[type="range"].style-range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: none;
+  box-shadow: 0 0 0 3px var(--accent-dim);
+  cursor: pointer;
+}
