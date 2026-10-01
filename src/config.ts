@@ -1,6 +1,6 @@
 /** 制作者の表記とリンク先（URL が空ならリンクなしの文字だけ表示） */
 export const AUTHOR_NAME = 'office 未来圏';
-export const AUTHOR_URL = '';
+export const AUTHOR_URL = 'https://mumble-mumble.com/';
 
 /** GitHub リポジトリの URL（公開後に確定させる） */
 export const REPO_URL = 'https://github.com/kohyoshida1-dev/photo-style-unifier';
